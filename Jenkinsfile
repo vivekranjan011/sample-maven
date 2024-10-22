@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('Code Checkout') {
           steps {
-            git(url: 'https://github.com/vivekranjan011/sample-maven.git', branch: 'main', poll: true, changelog: true)
+            git(url: 'https://github.com/vivekranjan011/sample-maven.git', branch: 'main')
           }
         }
 
@@ -36,7 +36,7 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
         echo 'Hooray'
       }
